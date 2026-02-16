@@ -30,14 +30,14 @@
 </head>
 
 <body
-  class="bg-[#f3f4f6] font-sans text-[#111111] antialiased overflow-x-hidden [&_h1]:font-display [&_h2]:font-display [&_h1]:text-[50px] [&_h2]:text-[50px]">
-  <header class="bg-black text-white relative">
+  class="bg-[#f3f4f6] font-sans text-[#111111] antialiased overflow-x-hidden [&_h1]:font-display [&_h2]:font-display [&_h3]:font-display [&_h4]:font-display [&_h5]:font-display [&_h6]:font-display [&_h4]:text-[27px] [&_h5]:text-[18px] [&_h6]:text-[18px] [&_h1]:text-[50px] [&_h2]:text-[50px]">
+  <header class="bg-black text-white relative z-50">
 
     <!-- NAVBAR -->
     <div class="mx-auto flex max-w-[1494px] items-center justify-between px-4 py-4 md:px-8">
 
       <!-- logo -->
-      <a href="#"><img src="image/Logo/MainLogo.png" alt="DwellFi" class="h-8 w-auto" /></a>
+      <a href="index.html"><img src="image/Logo/MainLogo.png" alt="DwellFi" class="h-8 w-auto" /></a>
 
       <!-- desktop menu -->
       <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.12em]">
@@ -70,7 +70,9 @@
     </div>
 
     <!-- MOBILE MENU -->
-    <div id="mobileMenu" class="absolute left-0 top-full w-full bg-black border-t border-white/10 hidden md:hidden">
+    <div
+      id="mobileMenu"
+      class="absolute left-0 top-full z-50 w-full bg-black border-t border-white/10 hidden md:hidden">
 
       <nav class="flex flex-col text-sm uppercase tracking-[0.12em]">
 
@@ -209,13 +211,13 @@
           <span
             class="pointer-events-none absolute left-2/3 top-[54px] hidden h-2.5 w-2.5 -translate-x-1/2 rounded-full border border-[#8230FF] bg-[#8230FF] md:block"></span>
 
-          <div class="grid md:grid-cols-3 [&>*+*]:mt-10 md:[&>*+*]:mt-0">
+          <div class="grid gap-10 md:grid-cols-3 md:gap-0">
             <article class="mx-auto flex flex-col items-center">
               <div class="relative h-24 w-24 sm:h-28 sm:w-28">
                 <div data-spin-ring data-speed="0.032"
-                  class="absolute -inset-2 rounded-full border border-dotted border-[#8230FF]"></div>
+                  class="absolute -inset-2 rounded-full border border-dashed border-[#8230FF]"></div>
                 <div data-spin-ring data-speed="-0.019"
-                  class="absolute -inset-4 rounded-full border border-dotted border-[#8230FF]"></div>
+                  class="absolute -inset-4 rounded-full border border-dashed border-[#8230FF]"></div>
                 <div
                   class="relative grid h-full w-full place-items-center rounded-full border border-[#8230FF] bg-white shadow-[0_10px_26px_rgba(45,31,67,0.16)]">
                   <img src="image/KPI/Investor.png" alt="Investors" class="h-11 w-11 object-contain" />
@@ -228,9 +230,9 @@
             <article class="mx-auto flex flex-col items-center">
               <div class="relative h-24 w-24 sm:h-28 sm:w-28">
                 <div data-spin-ring data-speed="0.028"
-                  class="absolute -inset-2 rounded-full border border-dotted border-[#8230FF]"></div>
+                  class="absolute -inset-2 rounded-full border border-dashed border-[#8230FF]"></div>
                 <div data-spin-ring data-speed="-0.022"
-                  class="absolute -inset-4 rounded-full border border-dotted border-[#8230FF]"></div>
+                  class="absolute -inset-4 rounded-full border border-dashed border-[#8230FF]"></div>
                 <div
                   class="relative grid h-full w-full place-items-center rounded-full border border-[#8230FF] bg-white shadow-[0_10px_26px_rgba(45,31,67,0.16)]">
                   <img src="image/KPI/Platform.png" alt="Funds" class="h-11 w-11 object-contain" />
@@ -243,9 +245,9 @@
             <article class="mx-auto flex flex-col items-center">
               <div class="relative h-24 w-24 sm:h-28 sm:w-28">
                 <div data-spin-ring data-speed="0.03"
-                  class="absolute -inset-2 rounded-full border border-dotted border-[#8230FF]"></div>
+                  class="absolute -inset-2 rounded-full border border-dashed border-[#8230FF]"></div>
                 <div data-spin-ring data-speed="-0.02"
-                  class="absolute -inset-4 rounded-full border border-dotted border-[#8230FF]"></div>
+                  class="absolute -inset-4 rounded-full border border-dashed border-[#8230FF]"></div>
                 <div
                   class="relative grid h-full w-full place-items-center rounded-full border border-[#8230FF] bg-white shadow-[0_10px_26px_rgba(45,31,67,0.16)]">
                   <img src="image/KPI/Capital.png" alt="Capital" class="h-11 w-11 object-contain" />
@@ -263,7 +265,7 @@
       <div class="mx-auto max-w-[980px]">
         <h3 class="text-center text-3xl font-medium sm:text-4xl md:text-5xl">Our <span
             class="text-brand">Clientele</span></h3>
-        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 [&>*+*]:mt-5 sm:[&>*+*]:mt-0">
+        <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-0 md:grid-cols-3">
           <article
             class="group relative mx-auto w-full max-w-[260px] bg-black/40 p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-brand/70 hover:bg-[#140725] hover:shadow-[0_0_0_1px_rgba(124,58,237,0.35)_inset]">
             <div
@@ -334,21 +336,24 @@
         <h3 class="text-center text-3xl font-medium leading-tight sm:text-4xl md:text-5xl">Data To Power <span
             class="text-brand">Unparalleled<br class="hidden sm:block"> Flexibility</span></h3>
 
-        <div class="mx-auto mt-6 flex w-max items-center text-base">
-          <button class="border-b-2 border-brand px-1 pb-1 text-brand">Fund Manager</button>
-          <button class="ml-5 border-b-2 border-transparent px-1 pb-1 text-neutral-700">Investor</button>
+        <div class="mx-auto mt-6 flex w-max items-center text-base" role="tablist" aria-label="Solution audience tabs">
+          <button id="solutionTabFund" type="button" role="tab" aria-selected="true" aria-controls="solutionPanelFund"
+            class="border-b-2 border-brand px-1 pb-1 text-brand transition-colors">Fund Manager</button>
+          <button id="solutionTabInvestor" type="button" role="tab" aria-selected="false"
+            aria-controls="solutionPanelInvestor"
+            class="ml-5 border-b-2 border-transparent px-1 pb-1 text-neutral-700 transition-colors hover:text-brand">Investor</button>
         </div>
 
-        <div class="mx-auto mt-10 grid max-w-[980px] md:grid-cols-2 [&>*+*]:mt-8 md:[&>*+*]:mt-0">
+        <div class="mx-auto mt-10 grid max-w-[980px] gap-8 md:grid-cols-2 md:gap-0">
           <div class="px-1">
-            <div class="space-y-5">
+            <div id="solutionPanelFund" role="tabpanel" aria-labelledby="solutionTabFund" class="space-y-5">
               <div class="flex items-start justify-between  pb-4">
                 <div class="flex items-start space-x-4">
                   <div class="relative h-10 w-10 shrink-0">
-                    <span class="absolute inset-0 rounded-full border border-dotted border-[#8230FF]"></span>
+                    <span class="absolute inset-0 rounded-full border border-dashed border-[#8230FF]"></span>
                     <span
-                      class="absolute inset-[3px] grid place-items-center rounded-full border border-[#8230FF]/35 bg-white">
-                      <img src="image/Digital/digital.png" alt="Digital Onboarding" class="bg-purple-900" />
+                      class="absolute inset-[3px] grid place-items-center rounded-full border border-[#8230FF]/35 bg-[#7C3AED]">
+                      <img src="image/Digital/digital.png" alt="Digital Onboarding" class="h-4 w-4 object-contain" />
                     </span>
                   </div>
                   <div>
@@ -363,10 +368,10 @@
               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4">
                   <div class="relative h-10 w-10 shrink-0">
-                    <span class="absolute inset-0 rounded-full border border-dotted border-[#8230FF]/70"></span>
+                    <span class="absolute inset-0 rounded-full border border-dashed border-[#8230FF]/70"></span>
                     <span
                       class="absolute inset-[3px] grid place-items-center rounded-full border border-[#8230FF]/25 bg-white">
-                      <img src="image/Digital/invesment.png" alt="Investor Onboarding" />
+                      <img src="image/Digital/invesment.png" alt="Investor Onboarding" class="h-4 w-4 object-contain" />
                     </span>
                   </div>
                   <p class="text-lg text-neutral-600">Investor Onboarding</p>
@@ -377,10 +382,10 @@
               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4">
                   <div class="relative h-10 w-10 shrink-0">
-                    <span class="absolute inset-0 rounded-full border border-dotted border-[#8230FF]/70"></span>
+                    <span class="absolute inset-0 rounded-full border border-dashed border-[#8230FF]/70"></span>
                     <span
                       class="absolute inset-[3px] grid place-items-center rounded-full border border-[#8230FF]/25 bg-white">
-                      <img src="image/Digital/kyc.png" alt="KYC AML" />
+                      <img src="image/Digital/kyc.png" alt="KYC AML" class="h-4 w-4 object-contain" />
                     </span>
                   </div>
                   <p class="text-lg leading-snug text-neutral-600">KYC/AML Accreditation or Verification</p>
@@ -391,13 +396,76 @@
               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4">
                   <div class="relative h-10 w-10 shrink-0">
-                    <span class="absolute inset-0 rounded-full border border-dotted border-[#8230FF]/70"></span>
+                    <span class="absolute inset-0 rounded-full border border-dashed border-[#8230FF]/70"></span>
                     <span
                       class="absolute inset-[3px] grid place-items-center rounded-full border border-[#8230FF]/25 bg-white">
-                      <img src="image/Digital/Vector (4).png" alt="Lorem Ipsum" />
+                      <img src="image/Digital/Vector (4).png" alt="Lorem Ipsum" class="h-4 w-4 object-contain" />
                     </span>
                   </div>
                   <p class="text-lg text-neutral-600">Lorem Ipsum Dolor Insite</p>
+                </div>
+                <span class="text-2xl text-neutral-500">+</span>
+              </div>
+            </div>
+
+            <div id="solutionPanelInvestor" role="tabpanel" aria-labelledby="solutionTabInvestor" class="hidden space-y-5">
+              <div class="flex items-start justify-between  pb-4">
+                <div class="flex items-start space-x-4">
+                  <div class="relative h-10 w-10 shrink-0">
+                    <span class="absolute inset-0 rounded-full border border-dotted border-[#8230FF]"></span>
+                    <span
+                      class="absolute inset-[3px] grid place-items-center rounded-full border border-[#8230FF]/35 bg-white">
+                      <img src="image/Digital/invesment.png" alt="Investor Portal" class="h-4 w-4 object-contain" />
+                    </span>
+                  </div>
+                  <div>
+                    <p class="text-2xl font-medium text-brand">Investor Portal</p>
+                    <p class="mt-1 max-w-[300px] text-sm text-neutral-500">Access portfolio updates, distributions, and
+                      reports from one dashboard.</p>
+                  </div>
+                </div>
+                <span class="pt-1 text-2xl text-neutral-500">-</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                  <div class="relative h-10 w-10 shrink-0">
+                    <span class="absolute inset-0 rounded-full border border-dotted border-[#8230FF]/70"></span>
+                    <span
+                      class="absolute inset-[3px] grid place-items-center rounded-full border border-[#8230FF]/25 bg-white">
+                      <img src="image/Digital/digital.png" alt="Digital Subscription" class="h-4 w-4 object-contain" />
+                    </span>
+                  </div>
+                  <p class="text-lg text-neutral-600">Digital Subscription</p>
+                </div>
+                <span class="text-2xl text-neutral-500">+</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                  <div class="relative h-10 w-10 shrink-0">
+                    <span class="absolute inset-0 rounded-full border border-dotted border-[#8230FF]/70"></span>
+                    <span
+                      class="absolute inset-[3px] grid place-items-center rounded-full border border-[#8230FF]/25 bg-white">
+                      <img src="image/Digital/kyc.png" alt="Compliance Tracking" class="h-4 w-4 object-contain" />
+                    </span>
+                  </div>
+                  <p class="text-lg text-neutral-600">Compliance Tracking</p>
+                </div>
+                <span class="text-2xl text-neutral-500">+</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                  <div class="relative h-10 w-10 shrink-0">
+                    <span class="absolute inset-0 rounded-full border border-dotted border-[#8230FF]/70"></span>
+                    <span
+                      class="absolute inset-[3px] grid place-items-center rounded-full border border-[#8230FF]/25 bg-white">
+                      <img src="image/Digital/Vector (4).png" alt="Liquidity Requests"
+                        class="h-4 w-4 object-contain" />
+                    </span>
+                  </div>
+                  <p class="text-lg text-neutral-600">Liquidity Requests</p>
                 </div>
                 <span class="text-2xl text-neutral-500">+</span>
               </div>
@@ -410,10 +478,10 @@
         </div>
       </div>
     </section>
-
+    <!-- --------company----------- -->
     <section id="company" class="px-4 pb-16 pt-10 md:px-8">
       <div class="mx-auto max-w-[980px]">
-        <div class="grid md:grid-cols-[1.1fr_1fr] md:items-start [&>*+*]:mt-6 md:[&>*+*]:mt-0">
+        <div class="grid gap-6 md:grid-cols-[1.1fr_1fr] md:items-start md:gap-0">
           <h3 class="text-4xl font-medium leading-[1.12] sm:text-5xl">Our Leadership Team Is <span
               class="text-brand">Best-In-Class</span></h3>
           <p class="max-w-[430px] text-sm leading-relaxed text-neutral-700">Lorem ipsum dolor sit amet, consectetur
@@ -441,7 +509,7 @@
             <div id="teamTrack" class="flex transition-transform duration-500 ease-out">
               <article class="team-slide box-border flex-none px-1.5">
                 <div class="h-[250px] bg-[#dfe3e6] p-3 text-center">
-                  <h4 class="text-[28px] leading-tight">Kumar Ujjwal</h4>
+                  <p class="text-[27px] leading-tight">Kumar Ujjwal</p>
                   <p class="mt-1 text-xs">Founder CEO</p>
                   <img src="image/Team/ujjal.png" alt="Kumar Ujjwal"
                     class="mt-4 h-[148px] w-full object-contain object-bottom">
@@ -450,7 +518,7 @@
 
               <article class="team-slide box-border flex-none px-1.5">
                 <div class="h-[250px] bg-black p-3 text-center text-white">
-                  <h4 class="text-[28px] leading-tight">Deepak Sheoran</h4>
+                  <p class="text-[27px] leading-tight">Deepak Sheoran</p>
                   <p class="mt-1 text-xs">Founder CTO</p>
                   <p class="mx-auto mt-3 max-w-[145px] text-[12px] leading-[1.45]">5+ years building software
                     infrastructure ex Citadel, ex Rubrik ex Walmart Labs, ex EMC</p>
@@ -459,7 +527,7 @@
 
               <article class="team-slide box-border flex-none px-1.5">
                 <div class="h-[250px] bg-[#dfe3e6] p-3 text-center">
-                  <h4 class="text-[28px] leading-tight">Ali Nasser</h4>
+                  <p class="text-[27px] leading-tight">Ali Nasser</p>
                   <p class="mt-1 text-xs leading-tight">Chief Marketing Officer</p>
                   <img src="image/Team/Ali.png" alt="Ali Nasser"
                     class="mt-4 h-[148px] w-full object-contain object-bottom">
@@ -468,7 +536,7 @@
 
               <article class="team-slide box-border flex-none px-1.5">
                 <div class="h-[250px] bg-[#dfe3e6] p-3 text-center">
-                  <h4 class="text-[28px] leading-tight">Alan Lee</h4>
+                  <p class="text-[27px] leading-tight">Alan Lee</p>
                   <p class="mt-1 text-xs">Chief AI Officer</p>
                   <img src="image/Team/Lee.png" alt="Alan Lee"
                     class="mt-4 h-[148px] w-full object-contain object-bottom">
@@ -477,7 +545,7 @@
 
               <article class="team-slide box-border flex-none px-1.5">
                 <div class="h-[250px] bg-[#dfe3e6] p-3 text-center">
-                  <h4 class="text-[28px] leading-tight">Nathan Paitchel</h4>
+                  <p class="text-[27px] leading-tight">Nathan Paitchel</p>
                   <p class="mt-1 text-xs">Head Of BD</p>
                   <img src="image/Team/Nathan.png" alt="Nathan Paitchel"
                     class="mt-4 h-[148px] w-full object-contain object-bottom">
@@ -491,7 +559,7 @@
       </div>
     </section>
     <!-- -----Backed------- -->
-    <section id="partners" class="bg-[#f5f6f7] px-4 py-14 md:px-8">
+    <section id="partners" class="bg-white px-4 py-14 md:px-8">
       <div class="mx-auto max-w-[1540px]">
         <h3 class="text-center text-3xl font-medium sm:text-4xl md:text-5xl">Backed <span class="text-brand">By</span>
         </h3>
@@ -566,7 +634,7 @@
 
       <!-- solutions -->
       <div>
-        <h4 class="mb-4 font-semibold">Solutions</h4>
+        <p class="mb-4 font-semibold text-[27px]">Solutions</p>
         <ul class="space-y-2 text-sm text-neutral-300">
           <li><a href="#" class="hover:text-white">Capital Raise</a></li>
           <li><a href="#" class="hover:text-white">GP/LP Portal</a></li>
@@ -581,7 +649,7 @@
 
       <!-- partners -->
       <div>
-        <h4 class="mb-4 font-semibold">Partners</h4>
+        <p class="mb-4 font-semibold text-[27px]">Partners</p>
         <ul class="space-y-2 text-sm text-neutral-300">
           <li><a href="#" class="hover:text-white">Hedge Funds</a></li>
           <li><a href="#" class="hover:text-white">Private Equity</a></li>
@@ -594,7 +662,7 @@
 
       <!-- company -->
       <div>
-        <h4 class="mb-4 font-semibold">Company</h4>
+        <p class="mb-4 font-semibold text-[27px]">Company</p>
         <ul class="space-y-2 text-sm text-neutral-300">
           <li><a href="#" class="hover:text-white">About</a></li>
           <li><a href="#" class="hover:text-white">Blog</a></li>
@@ -627,26 +695,60 @@
 
       const btn = document.getElementById("menuBtn");
       const menu = document.getElementById("mobileMenu");
-      const links = menu.querySelectorAll("a");
+      const links = menu ? menu.querySelectorAll("a") : [];
+      const tabFund = document.getElementById("solutionTabFund");
+      const tabInvestor = document.getElementById("solutionTabInvestor");
+      const panelFund = document.getElementById("solutionPanelFund");
+      const panelInvestor = document.getElementById("solutionPanelInvestor");
 
-      // TOGGLE MENU
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
+      if (btn && menu) {
+        const closeMenu = () => menu.classList.add("hidden");
 
-      // CLOSE MENU WHEN CLICK LINK
-      links.forEach(link => {
-        link.addEventListener("click", () => {
-          menu.classList.add("hidden");
+        // TOGGLE MENU
+        btn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          menu.classList.toggle("hidden");
         });
-      });
 
-      // CLOSE WHEN CLICK OUTSIDE
-      document.addEventListener("click", (e) => {
-        if (!menu.contains(e.target) && !btn.contains(e.target)) {
-          menu.classList.add("hidden");
+        // CLOSE MENU WHEN CLICK LINK
+        links.forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        // CLOSE WHEN CLICK OUTSIDE
+        document.addEventListener("click", (event) => {
+          if (!menu.contains(event.target) && !btn.contains(event.target)) {
+            closeMenu();
+          }
+        });
+      }
+
+      // SOLUTION TABS TOGGLE
+      if (tabFund && tabInvestor && panelFund && panelInvestor) {
+        function setActiveTab(target) {
+          const isFund = target === "fund";
+
+          panelFund.classList.toggle("hidden", !isFund);
+          panelInvestor.classList.toggle("hidden", isFund);
+
+          tabFund.setAttribute("aria-selected", String(isFund));
+          tabInvestor.setAttribute("aria-selected", String(!isFund));
+
+          tabFund.classList.toggle("border-brand", isFund);
+          tabFund.classList.toggle("text-brand", isFund);
+          tabFund.classList.toggle("border-transparent", !isFund);
+          tabFund.classList.toggle("text-neutral-700", !isFund);
+
+          tabInvestor.classList.toggle("border-brand", !isFund);
+          tabInvestor.classList.toggle("text-brand", !isFund);
+          tabInvestor.classList.toggle("border-transparent", isFund);
+          tabInvestor.classList.toggle("text-neutral-700", isFund);
         }
-      });
+
+        tabFund.addEventListener("click", () => setActiveTab("fund"));
+        tabInvestor.addEventListener("click", () => setActiveTab("investor"));
+        setActiveTab("fund");
+      }
 
     });
 

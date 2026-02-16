@@ -23,43 +23,80 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
 </head>
 
-<body class="bg-[#f5f5f6] font-sans text-[#111111] antialiased overflow-x-hidden [&_h1]:font-display [&_h2]:font-display [&_h1]:text-[50px] [&_h2]:text-[50px]">
-  <header class="bg-black text-white">
-    <div class="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-4 md:px-8">
+<body
+  class="bg-[#f5f5f6] font-sans text-[#111111] antialiased overflow-x-hidden [&_h1]:font-display [&_h2]:font-display [&_h3]:font-display [&_h4]:font-display [&_h5]:font-display [&_h6]:font-display [&_h4]:text-[27px] [&_h5]:text-[18px] [&_h6]:text-[18px] [&_h1]:text-[50px] [&_h2]:text-[50px]">
+  <header class="bg-black text-white relative">
+
+    <!-- NAVBAR -->
+    <div class="mx-auto flex max-w-[1494px] items-center justify-between px-4 py-4 md:px-8">
+
+      <!-- logo -->
       <a href="index.html"><img src="image/Logo/MainLogo.png" alt="DwellFi" class="h-8 w-auto" /></a>
-      <nav class="hidden items-center space-x-8 text-xs uppercase tracking-[0.12em] md:flex">
-        <a href="why.html" class="hover:text-brand">Why</a>
-        <a href="solutions.html" class="hover:text-brand">Solutions</a>
-        <a href="partners.html" class="hover:text-brand">Partners</a>
-        <a href="company.html" class="text-brand">Company</a>
+
+      <!-- desktop menu -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.12em]">
+        <a href="why.html" class="hover:text-brand transition">Why</a>
+        <a href="solutions.html" class="hover:text-brand transition">Solutions</a>
+        <a href="partners.html" class="hover:text-brand transition">Partners</a>
+        <a href="company.html" class="hover:text-brand transition">Company</a>
       </nav>
-      <div class="hidden items-center space-x-3 md:flex">
+
+      <!-- desktop buttons -->
+      <div class="hidden md:flex items-center gap-3">
         <button
-          class="border border-white px-4 py-2 text-xs font-medium uppercase tracking-wide hover:bg-white hover:text-black">Connect
-          With Us</button>
-        <button class="flex items-center space-x-2 bg-brand px-3 py-2 text-xs font-medium uppercase">
+          class="border border-white px-4 py-2 text-xs font-medium uppercase tracking-wide hover:bg-white hover:text-black transition">
+          Connect With Us
+        </button>
+
+        <button class="flex items-center gap-2 bg-brand px-3 py-2 text-xs font-medium uppercase">
           <img src="image/Logo/navBtnLogo.png" alt="User" class="h-5 w-5 rounded-full" />
           Jhonson
         </button>
       </div>
-    </div>
-    <div
-      class="mx-auto flex max-w-[1200px] items-center justify-between border-t border-white/10 px-4 py-3 text-[11px] uppercase tracking-[0.12em] md:hidden">
-      <a href="why.html">Why</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="partners.html">Partners</a>
-      <a href="company.html" class="text-brand">Company</a>
+
+      <!-- hamburger -->
+      <button id="menuBtn" class="md:hidden flex flex-col gap-1">
+        <span class="w-6 h-0.5 bg-white"></span>
+        <span class="w-6 h-0.5 bg-white"></span>
+        <span class="w-6 h-0.5 bg-white"></span>
+      </button>
+
     </div>
 
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="absolute left-0 top-full w-full bg-black border-t border-white/10 hidden md:hidden">
 
+      <nav class="flex flex-col text-sm uppercase tracking-[0.12em]">
+
+        <a href="why.html" class="px-6 py-4 border-b border-white/10 hover:bg-white/10">Why</a>
+        <a href="solutions.html" class="px-6 py-4 border-b border-white/10 hover:bg-white/10">Solutions</a>
+        <a href="partners.html" class="px-6 py-4 border-b border-white/10 hover:bg-white/10">Partners</a>
+        <a href="company.html" class="px-6 py-4 border-b border-white/10 hover:bg-white/10">Company</a>
+
+        <div class="flex flex-col gap-3 p-6">
+          <button
+            class="border border-white px-4 py-3 text-xs font-medium uppercase hover:bg-white hover:text-black transition">
+            Connect With Us
+          </button>
+
+          <button class="flex items-center justify-center gap-2 bg-brand px-4 py-3 text-xs font-medium uppercase">
+            <img src="image/Logo/navBtnLogo.png" alt="User" class="h-5 w-5 rounded-full" />
+            Jhonson
+          </button>
+        </div>
+
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="mx-auto grid max-w-[1200px] grid-cols-1 md:grid-cols-2">
+    <section class="mx-auto grid max-w-[1600px] grid-cols-1 md:grid-cols-2">
       <div class="bg-black p-4 sm:p-8 md:p-10 lg:p-12">
         <div class="bg-gradient-to-r from-[#6D28D9] to-[#8B5CF6] p-8 md:p-10 shadow-2xl">
           <h1 class="text-3xl font-medium text-white sm:text-4xl md:text-5xl">About Us</h1>
@@ -97,69 +134,49 @@
       </div>
     </section>
 
-    <section class="relative px-4 py-16 md:px-8">
-      <div
-        class="pointer-events-none absolute inset-0 opacity-35 [background:radial-gradient(circle_at_10%_80%,#d7d7e2_0,transparent_32%),radial-gradient(circle_at_90%_50%,#d7d7e2_0,transparent_35%)]">
-      </div>
-      <div class="relative mx-auto grid max-w-[980px] items-center md:grid-cols-2 [&>*+*]:mt-10 md:[&>*+*]:mt-0">
-        <img src="image/company/OURMISSION.png" alt="Our mission" class="h-auto w-full object-cover" />
-        <div>
-          <h3 class="text-3xl font-medium sm:text-4xl md:text-5xl">Our <span class="text-brand">Mission</span></h3>
-          <p class="mt-4 text-base leading-relaxed text-neutral-700">At DwellFi, our mission is to bring liquidity and
-            trust to private markets, simplifying the fund administration experience. Our dedicated team works
-            tirelessly to ensure our clients navigate the process with confidence and ease. By delivering exceptional
-            customer service and fostering transparency at every stage, we aim to build lasting relationships and
-            instill trust in the private market.</p>
-          <p class="mt-6 text-2xl font-medium leading-tight sm:text-3xl md:text-4xl">Revolutionizing Real World Assets
-            With Technology</p>
+    <section class="relative px-4 py-12 md:px-8">
+      <div class="mx-auto grid max-w-[980px] overflow-hidden">
+        <div class="grid items-center gap-10 md:grid-cols-[1fr_0.95fr] md:gap-12">
+          <div data-company-animate="left"
+            class="opacity-0 -translate-x-24 md:-translate-x-36 transition-all duration-1000 ease-out will-change-transform">
+            <img src="image/company/OURMISSION.png" alt="Our mission" class="h-auto w-full object-cover" />
+          </div>
+          <div data-company-animate="right"
+            class="opacity-0 translate-x-24 md:translate-x-36 transition-all duration-1000 ease-out will-change-transform">
+            <h2 class="text-3xl font-medium sm:text-4xl md:text-5xl">Our <span class="text-brand">Mission</span></h2>
+            <p class="mt-4 text-base leading-relaxed text-neutral-700">At DwellFi, our mission is to bring liquidity and
+              trust to private markets, simplifying the fund administration experience. Our dedicated team works
+              tirelessly to ensure our clients navigate the process with confidence and ease. By delivering exceptional
+              customer service and fostering transparency at every stage, we aim to build lasting relationships and
+              instill trust in the private market.</p>
+            <h3 class="mt-6 text-2xl font-medium leading-tight sm:text-3xl md:text-4xl">Revolutionizing Real World
+              Assets
+              With Technology</h3>
+          </div>
         </div>
       </div>
     </section>
 
-    <section
-      class="relative overflow-hidden bg-gradient-to-r from-[#6D28D9] to-[#8B5CF6] px-4 py-20 text-white md:px-8">
-      <div class="mx-auto grid max-w-[980px] md:grid-cols-[1fr_auto_1fr] md:items-center [&>*+*]:mt-8 md:[&>*+*]:mt-0">
-        <h3 class="text-3xl font-medium leading-tight sm:text-4xl md:text-5xl">Managing Risk &amp; Source Of Funds</h3>
-
-        <div
-          class="relative mx-auto grid h-64 w-full max-w-[14rem] place-items-center rounded-2xl bg-white text-brand shadow-2xl sm:h-72 sm:w-52">
-          <img src="image/company/Group 1707482667.png" alt="Liquidity pool" class="h-16 w-16 object-contain" />
-          <p class="px-3 text-center text-2xl font-medium leading-tight sm:text-3xl md:text-4xl">DwellFi Liquidity Pool
-          </p>
+    <section class="relative overflow-hidden bg-gradient-to-r from-[#6D28D9] to-[#8B5CF6] px-4 py-20 text-white md:px-8">
+      <div class="mx-auto grid max-w-[980px] gap-8 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-0">
+        <div class="max-auto max-w-[392px]">
+          <h3 class="text-3xl font-medium leading-tight sm:text-4xl md:text-5xl">Managing Risk & Source Of Funds</h3>
         </div>
 
-        <div class="space-y-4 text-2xl font-medium sm:text-3xl md:space-y-6 md:text-4xl">
-          <div class="flex items-center space-x-4">
-            <span class="h-px w-12 bg-white/80"></span>
-            <span>Investors</span>
-          </div>
-          <div class="flex items-center space-x-4">
-            <span class="h-px w-12 bg-white/80"></span>
-            <span>Funds/Deals</span>
-          </div>
-          <div class="flex items-center space-x-4">
-            <span class="h-px w-12 bg-white/80"></span>
-            <span>Redemption</span>
-          </div>
-          <div class="flex items-center space-x-4">
-            <span class="h-px w-12 bg-white/80"></span>
-            <span>Borrowing</span>
-          </div>
-          <div class="flex items-center space-x-4">
-            <span class="h-px w-12 bg-white/80"></span>
-            <span>Trading</span>
-          </div>
+        <div class="relative ml-20">
+          <img src="image/company/image 101.png" alt="Liquidity pool"/>
         </div>
-      </div>
-      <div
-        class="absolute bottom-0 left-1/2 h-0 w-0 -translate-x-1/2 translate-y-full border-l-[24px] border-r-[24px] border-t-[16px] border-l-transparent border-r-transparent border-t-[#7C3AED]">
       </div>
     </section>
 
     <section class="px-4 py-16 md:px-8">
-      <div class="mx-auto grid max-w-[980px] items-center md:grid-cols-2 [&>*+*]:mt-10 md:[&>*+*]:mt-0">
-        <img src="image/company/ourValu.png" alt="Our values" class="h-auto w-full object-cover" />
-        <div>
+      <div class="mx-auto grid max-w-[980px] items-center gap-10 md:grid-cols-[1fr_0.95fr] md:gap-12">
+        <div data-company-animate="left"
+          class="opacity-0 -translate-x-24 md:-translate-x-36 transition-all duration-1000 ease-out will-change-transform">
+          <img src="image/company/ourValu.png" alt="Our values" class="h-auto w-full object-cover" />
+        </div>
+        <div data-company-animate="right"
+          class="opacity-0 translate-x-24 md:translate-x-36 transition-all duration-1000 ease-out will-change-transform">
           <h3 class="text-3xl font-medium sm:text-4xl md:text-5xl">Our <span class="text-brand">Values</span></h3>
           <p class="mt-2 text-2xl font-medium leading-tight sm:text-3xl md:text-4xl">Guiding Principles For Our Work And
             Relationships</p>
@@ -184,22 +201,36 @@
     </section>
   </main>
 
-  <footer class="bg-black px-4 py-14 text-white md:px-8">
-    <div class="mx-auto grid max-w-[1100px] md:grid-cols-[1.6fr_1fr_1fr_1fr] [&>*+*]:mt-10 md:[&>*+*]:mt-0">
+  <footer class="bg-black text-white px-4 py-14 md:px-8">
+
+    <div class="mx-auto max-w-[1100px] grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- brand -->
       <div>
-        <img src="image/Logo/MainLogo.png" alt="DwellFi" class="h-11 w-auto" />
-        <p class="mt-4 max-w-sm text-sm leading-relaxed text-neutral-300">DwellFi is the leading end-to-end fund data
-          management platform for fund managers and investors looking to leverage cutting edge generative AI, tap into
-          secondary market liquidity, and keep their asset securely data on-chain.</p>
-        <button class="mt-5 border border-white px-5 py-2">Connect With Us</button>
-        <div class="mt-4 flex space-x-2">
-          <a href="#" class="grid h-6 w-6 place-items-center border border-white/50">
-            <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-white">
+        <a href="#"><img src="image/Logo/MainLogo.png" alt="DwellFi" class="h-11 w-auto"></a>
+
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-neutral-300">
+          DwellFi is the leading end-to-end fund data management platform for fund managers and investors
+          looking to leverage cutting edge generative AI, tap into secondary market liquidity, and keep
+          their asset securely data on-chain.
+        </p>
+
+        <button class="mt-5 border border-white px-5 py-2 hover:bg-white hover:text-black transition">
+          Connect With Us
+        </button>
+
+        <!-- social -->
+        <div class="mt-5 flex gap-3">
+          <a href="#"
+            class="grid h-9 w-9 place-items-center border border-white/40 hover:bg-white hover:text-black transition">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current">
               <path d="M18.9 2H22l-6.8 7.8L23 22h-6.1l-4.8-6.2L6.7 22H3.6l7.2-8.2L1 2h6.2l4.3 5.7z" />
             </svg>
           </a>
-          <a href="#" class="grid h-6 w-6 place-items-center border border-white/50">
-            <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-white">
+
+          <a href="#"
+            class="grid h-9 w-9 place-items-center border border-white/40 hover:bg-white hover:text-black transition">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current">
               <path
                 d="M6.94 6.5A1.44 1.44 0 1 1 4.06 6.5a1.44 1.44 0 0 1 2.88 0zM4.3 8.8h2.8V20H4.3V8.8zm4.4 0h2.7v1.5h.04c.37-.71 1.3-1.46 2.67-1.46 2.86 0 3.39 1.88 3.39 4.32V20h-2.8v-5.9c0-1.41-.03-3.23-1.97-3.23-1.97 0-2.27 1.54-2.27 3.13V20H8.7V8.8z" />
             </svg>
@@ -207,50 +238,143 @@
         </div>
       </div>
 
+      <!-- solutions -->
       <div>
-        <h4 class="mb-3 font-semibold">Solutions</h4>
+        <p class="mb-4 font-semibold text-[27px]">Solutions</p>
         <ul class="space-y-2 text-sm text-neutral-300">
-          <li>Capital Raise</li>
-          <li>GP/LP Portal</li>
-          <li>Investment Opportunities</li>
-          <li>Fund Administration</li>
-          <li>Fund Data Platform</li>
-          <li>On-Chain Data</li>
-          <li>AI Chatbot</li>
-          <li>LP Liquidity</li>
+          <li><a href="#" class="hover:text-white">Capital Raise</a></li>
+          <li><a href="#" class="hover:text-white">GP/LP Portal</a></li>
+          <li><a href="#" class="hover:text-white">Investment Opportunities</a></li>
+          <li><a href="#" class="hover:text-white">Fund Administration</a></li>
+          <li><a href="#" class="hover:text-white">Fund Data Platform</a></li>
+          <li><a href="#" class="hover:text-white">On-Chain Data</a></li>
+          <li><a href="#" class="hover:text-white">AI Chatbot</a></li>
+          <li><a href="#" class="hover:text-white">LP Liquidity</a></li>
         </ul>
       </div>
 
+      <!-- partners -->
       <div>
-        <h4 class="mb-3 font-semibold">Partners</h4>
+        <p class="mb-4 font-semibold text-[27px]">Partners</p>
         <ul class="space-y-2 text-sm text-neutral-300">
-          <li>Hedge Funds</li>
-          <li>Private Equity</li>
-          <li>Real Estate</li>
-          <li>Fund Admin</li>
-          <li>Digital Assets</li>
-          <li>Our Investors</li>
+          <li><a href="#" class="hover:text-white">Hedge Funds</a></li>
+          <li><a href="#" class="hover:text-white">Private Equity</a></li>
+          <li><a href="#" class="hover:text-white">Real Estate</a></li>
+          <li><a href="#" class="hover:text-white">Fund Admin</a></li>
+          <li><a href="#" class="hover:text-white">Digital Assets</a></li>
+          <li><a href="#" class="hover:text-white">Our Investors</a></li>
         </ul>
       </div>
 
+      <!-- company -->
       <div>
-        <h4 class="mb-3 font-semibold">Company</h4>
+        <p class="mb-4 font-semibold text-[27px]">Company</p>
         <ul class="space-y-2 text-sm text-neutral-300">
-          <li>About</li>
-          <li>Blog</li>
-          <li>Case Studies</li>
-          <li>Whitepapers</li>
-          <li>Careers</li>
+          <li><a href="#" class="hover:text-white">About</a></li>
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+          <li><a href="#" class="hover:text-white">Case Studies</a></li>
+          <li><a href="#" class="hover:text-white">Whitepapers</a></li>
+          <li><a href="#" class="hover:text-white">Careers</a></li>
         </ul>
       </div>
+
     </div>
 
-    <div
-      class="mx-auto mt-10 flex max-w-[1100px] flex-col justify-between space-y-2 border-t border-white/20 pt-5 text-center text-xs text-neutral-400 md:flex-row md:space-y-0 md:text-left">
-      <p>Copyright 2024 DwellFi. All Rights Reserved.</p>
-      <p>Privacy Policy | Terms for Services</p>
+    <!-- bottom bar -->
+    <div class="mx-auto mt-12 max-w-[1200px] border-t border-white/20 pt-6
+              flex flex-col items-center gap-3 text-xs text-neutral-400
+              md:flex-row md:justify-between md:text-left">
+
+      <p>Copyright 2024 <a href="#">DwellFi.</a> All Rights Reserved.</p>
+      <p class="space-x-3">
+        <a href="#" class="hover:text-white">Privacy Policy</a>
+        <span>|</span>
+        <a href="#" class="hover:text-white">Terms of Services</a>
+      </p>
+
     </div>
+
   </footer>
+
+  <script>
+    (() => {
+      const btn = document.getElementById('menuBtn');
+      const menu = document.getElementById('mobileMenu');
+      if (!btn || !menu) return;
+
+      const links = menu.querySelectorAll('a');
+      const closeMenu = () => menu.classList.add('hidden');
+
+      btn.addEventListener('click', (event) => {
+        event.stopPropagation();
+        menu.classList.toggle('hidden');
+      });
+
+      links.forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target) && !btn.contains(event.target)) {
+          closeMenu();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const animatedBlocks = document.querySelectorAll('[data-company-animate]');
+      if (!animatedBlocks.length) return;
+
+      const reset = (block) => {
+        const side = block.dataset.companyAnimate;
+        block.classList.remove('opacity-100', 'translate-x-0');
+        block.classList.add('opacity-0');
+
+        if (side === 'left') {
+          block.classList.add('-translate-x-24', 'md:-translate-x-36');
+          block.classList.remove('translate-x-24', 'md:translate-x-36');
+        } else {
+          block.classList.add('translate-x-24', 'md:translate-x-36');
+          block.classList.remove('-translate-x-24', 'md:-translate-x-36');
+        }
+      };
+
+      const reveal = (block) => {
+        const side = block.dataset.companyAnimate;
+        block.classList.remove('opacity-0');
+        block.classList.add('opacity-100');
+
+        if (side === 'left') {
+          block.classList.remove('-translate-x-24', 'md:-translate-x-36');
+        } else {
+          block.classList.remove('translate-x-24', 'md:translate-x-36');
+        }
+        block.classList.add('translate-x-0');
+      };
+
+      if (!('IntersectionObserver' in window)) {
+        animatedBlocks.forEach(reveal);
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            reveal(entry.target);
+          } else {
+            reset(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      animatedBlocks.forEach((block) => {
+        reset(block);
+        observer.observe(block);
+      });
+    })();
+  </script>
 
 </body>
 
