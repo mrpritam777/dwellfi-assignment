@@ -95,9 +95,10 @@
     </div>
   </header>
 
-  <main>
+  <main> 
     <!-- -------hero------- -->
-    <section class=" relative min-h-screen bg-cover h-full w-screen bg-center bg-no-repeat" style="background-image: url(./image/WhyHero.png);">
+    <section class="relative min-h-screen bg-cover bg-center bg-no-repeat"
+      style="background-image:url('./image/whyHero.png');">
       <div class="absolute"></div>
       <div class="relative z-10 flex min-h-screen items-center p-4 sm:p-8 md:p-10 lg:p-12">
         <div class="w-full max-w-[937px] bg-gradient-to-r from-[#6D28D9] to-[#8B5CF6] p-8 text-center shadow-2xl md:p-12">
@@ -340,85 +341,7 @@
 
   </footer>
 
-  <script>
-    (() => {
-      const btn = document.getElementById('menuBtn');
-      const menu = document.getElementById('mobileMenu');
-      if (!btn || !menu) return;
-
-      const links = menu.querySelectorAll('a');
-      const closeMenu = () => menu.classList.add('hidden');
-
-      btn.addEventListener('click', (event) => {
-        event.stopPropagation();
-        menu.classList.toggle('hidden');
-      });
-
-      links.forEach((link) => {
-        link.addEventListener('click', closeMenu);
-      });
-
-      document.addEventListener('click', (event) => {
-        if (!menu.contains(event.target) && !btn.contains(event.target)) {
-          closeMenu();
-        }
-      });
-    })();
-  </script>
-
-  <script>
-    (() => {
-      const animatedBlocks = document.querySelectorAll('[data-why-animate]');
-      if (!animatedBlocks.length) return;
-
-      const reset = (block) => {
-        const side = block.dataset.whyAnimate;
-        block.classList.remove('opacity-100', 'translate-x-0');
-        block.classList.add('opacity-0');
-
-        if (side === 'left') {
-          block.classList.add('-translate-x-24', 'md:-translate-x-36');
-          block.classList.remove('translate-x-24', 'md:translate-x-36');
-        } else {
-          block.classList.add('translate-x-24', 'md:translate-x-36');
-          block.classList.remove('-translate-x-24', 'md:-translate-x-36');
-        }
-      };
-
-      const reveal = (block) => {
-        const side = block.dataset.whyAnimate;
-        block.classList.remove('opacity-0');
-        block.classList.add('opacity-100');
-
-        if (side === 'left') {
-          block.classList.remove('-translate-x-24', 'md:-translate-x-36');
-        } else {
-          block.classList.remove('translate-x-24', 'md:translate-x-36');
-        }
-        block.classList.add('translate-x-0');
-      };
-
-      if (!('IntersectionObserver' in window)) {
-        animatedBlocks.forEach(reveal);
-        return;
-      }
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            reveal(entry.target);
-          } else {
-            reset(entry.target);
-          }
-        });
-      }, { threshold: 0.32 });
-
-      animatedBlocks.forEach((block) => {
-        reset(block);
-        observer.observe(block);
-      });
-    })();
-  </script>
+  <script src="./JS/why.js"></script>
 
 </body>
 
